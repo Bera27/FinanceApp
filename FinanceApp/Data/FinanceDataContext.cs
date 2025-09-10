@@ -1,14 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FinanceApp.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace FinanceApp.Data
+namespace FinanceApp.Data;
+
+public class FinanceDataContext : DbContext
 {
-    public class FinanceDataContext : DbContext
+    public DbSet<Categoria> Categorias { get; set; }
+    public DbSet<Despesa> Despesas { get; set; }
+    public DbSet<MetaOrcamento> MetaOrcamentos { get; set; }
+    public DbSet<Receita> Receitas { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        public FinanceDataContext(DbContextOptions<FinanceDataContext> options) : base(options) { }
+        optionsBuilder.UseSqlite("Data Source=finance.db");
     }
 }
+
