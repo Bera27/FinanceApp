@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using FinanceApp.Data;
 
 namespace FinanceApp
 {
@@ -14,6 +16,17 @@ namespace FinanceApp
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+
+            var dbPath = Path.Combine(FileSystem.AppDataDirectory, "financeapp.db3");
+            builder.Services.AddSingleton<FinanceDataContext>(_ => new FinanceDataContext(dbPath));
+
+            var app = builder.Build();
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var db = scope.ServiceProvider.GetRequiredService<FinanceDataContext>();
+                db.Database.Migrate();
+            }
 
 #if DEBUG
     		builder.Logging.AddDebug();

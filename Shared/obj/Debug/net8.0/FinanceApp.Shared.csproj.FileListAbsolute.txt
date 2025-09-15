@@ -1,0 +1,13 @@
+C:\Projetos\FinanceApp\Shared\bin\Debug\net8.0\FinanceApp.Shared.deps.json
+C:\Projetos\FinanceApp\Shared\bin\Debug\net8.0\FinanceApp.Shared.dll
+C:\Projetos\FinanceApp\Shared\bin\Debug\net8.0\FinanceApp.Shared.pdb
+C:\Projetos\FinanceApp\Shared\obj\Debug\net8.0\FinanceApp.Shared.csproj.AssemblyReference.cache
+C:\Projetos\FinanceApp\Shared\obj\Debug\net8.0\FinanceApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\FinanceApp\Shared\obj\Debug\net8.0\FinanceApp.Shared.AssemblyInfoInputs.cache
+C:\Projetos\FinanceApp\Shared\obj\Debug\net8.0\FinanceApp.Shared.AssemblyInfo.cs
+C:\Projetos\FinanceApp\Shared\obj\Debug\net8.0\FinanceApp.Shared.csproj.CoreCompileInputs.cache
+C:\Projetos\FinanceApp\Shared\obj\Debug\net8.0\FinanceApp.Shared.sourcelink.json
+C:\Projetos\FinanceApp\Shared\obj\Debug\net8.0\FinanceApp.Shared.dll
+C:\Projetos\FinanceApp\Shared\obj\Debug\net8.0\refint\FinanceApp.Shared.dll
+C:\Projetos\FinanceApp\Shared\obj\Debug\net8.0\FinanceApp.Shared.pdb
+C:\Projetos\FinanceApp\Shared\obj\Debug\net8.0\ref\FinanceApp.Shared.dll
