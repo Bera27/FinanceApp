@@ -38,12 +38,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = FinanceApp.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Projetos/FinanceApp/FinanceApp/MainPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = FinanceApp.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
-
 [C:/Projetos/FinanceApp/FinanceApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceApp.Resources.Styles.Colors.xaml
@@ -55,3 +49,15 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceApp.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Projetos/FinanceApp/FinanceApp/Views/DespesaView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceApp.Views.DespesaView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\DespesaView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\DespesaView.xaml
+
+[C:/Projetos/FinanceApp/FinanceApp/Views/HomeView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceApp.Views.HomeView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\HomeView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\HomeView.xaml

@@ -17,6 +17,10 @@ namespace FinanceApp
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+#if DEBUG
+            builder.Logging.AddDebug();
+#endif
+
             var dbPath = Path.Combine(FileSystem.AppDataDirectory, "financeapp.db3");
             builder.Services.AddSingleton<FinanceDataContext>(_ => new FinanceDataContext(dbPath));
 
@@ -28,11 +32,7 @@ namespace FinanceApp
                 db.Database.Migrate();
             }
 
-#if DEBUG
-    		builder.Logging.AddDebug();
-#endif
-
-            return builder.Build();
+            return app;
         }
     }
 }
