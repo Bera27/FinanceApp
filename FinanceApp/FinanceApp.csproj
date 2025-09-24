@@ -75,10 +75,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\DespesaView.xaml">
+	  <Compile Update="Views\AddDespesaView.xaml.cs">
+	    <DependentUpon>AddDespesaView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\DespesaView.xaml.cs">
+	    <DependentUpon>DespesaView.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\AddDespesaView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\HomeView.xaml">
+	  <MauiXaml Update="Views\DespesaView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

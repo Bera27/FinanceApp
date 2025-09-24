@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinanceApp.Views.AddDespesaView"
+             Shell.NavBarIsVisible="False">
+    
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="DESPESAS"
+                   FontSize="20"
+                   TextDecorations="Underline"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Margin="20,0,0,0" />
+
+            <Label Text="RENDA"
+                   FontSize="20"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   Margin="0,0,20,0" />
+
+        </Grid>
+
+        <Border HeightRequest="550"
+                WidthRequest="300"
+                StrokeShape="RoundRectangle 15" Padding="10">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                
+                
+                <!-- Valor -->
+                <Label Text="R$"
+                       TextColor="ForestGreen"
+                       FontSize="20"
+                       HorizontalOptions="Center"
+                       Grid.ColumnSpan="10"
+                       Margin="0,10,130,0"/>
+
+                <Entry x:Name="precoEntry"
+                       TextColor="ForestGreen"
+                       Placeholder="0"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       Grid.ColumnSpan="10"
+                       HeightRequest="10"
+                       WidthRequest="100"
+                       Keyboard="Numeric"/>
+
+                <!-- Data -->
+                <Label Text="Data:"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       Margin="0,200,0,0"/>
+
+                <DatePicker x:Name="dataPicker"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Format="dd/MM/yyyy"
+                            MinimumDate="2025-01-01"
+                            Margin="-20,190,0,20"
+                            DateSelected="dataPicker_DateSelected" />
+
+                <!--Numero de parcelas-->
+                <Label Text="Parcelas:"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       Margin="0,10,0,30"/>
+
+                <Border HeightRequest="45" 
+                        WidthRequest="60"
+                        StrokeShape="RoundRectangle 20"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="-155,0,0,20">
+
+                    <Entry x:Name="parcelasEntry"
+                           Placeholder="Ex: 10" 
+                           VerticalTextAlignment="Center"
+                           Keyboard="Numeric"/>
+
+                </Border>
+
+                <!-- Descrição -->
+                <Label Text="Descrição:"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       Margin="0,10,0,0"/>
+
+                <Border HeightRequest="45"
+                        WidthRequest="200"
+                        StrokeShape="RoundRectangle 20"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Margin="5,0,0,0">
+
+                    <Entry x:Name="descricaoEntry"
+                           Placeholder="Ex: Escola do Bruno" 
+                           VerticalTextAlignment="Center"
+                           Keyboard="Numeric"/>
+                </Border>
+
+                <Button Text="Adicionar"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="2"
+                        HorizontalOptions="Center"
+                        WidthRequest="150"
+                        HeightRequest="50"
+                        Background="#ffa300"
+                        Clicked="Button_Clicked"
+                        Margin="0,100,0,0"/>
+            </Grid>
+        </Border>
+    </StackLayout>
+</ContentPage>

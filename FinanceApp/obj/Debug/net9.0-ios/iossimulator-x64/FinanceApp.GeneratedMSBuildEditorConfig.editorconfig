@@ -50,14 +50,14 @@ build_metadata.AdditionalFiles.ManifestResourceName = FinanceApp.Resources.Style
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Projetos/FinanceApp/FinanceApp/Views/AddDespesaView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceApp.Views.AddDespesaView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AddDespesaView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AddDespesaView.xaml
+
 [C:/Projetos/FinanceApp/FinanceApp/Views/DespesaView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceApp.Views.DespesaView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\DespesaView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\DespesaView.xaml
-
-[C:/Projetos/FinanceApp/FinanceApp/Views/HomeView.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = FinanceApp.Views.HomeView.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\HomeView.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\HomeView.xaml

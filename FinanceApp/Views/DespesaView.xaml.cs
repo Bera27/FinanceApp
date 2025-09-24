@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+
 namespace FinanceApp.Views;
 
 public partial class DespesaView : ContentPage
@@ -7,13 +9,8 @@ public partial class DespesaView : ContentPage
 		InitializeComponent();
 	}
 
-    private void dataPicker_DateSelected(object sender, DateChangedEventArgs e)
+    private async void Despesa_Tapped(object sender, TappedEventArgs e)
     {
-
-    }
-
-    private void Button_Clicked(object sender, EventArgs e)
-    {
-
+		await Shell.Current.GoToAsync("AddDespesa");
     }
 }
