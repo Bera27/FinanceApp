@@ -24,8 +24,7 @@ namespace FinanceApp.Data.Mappings
             builder.Property(x => x.Tipo)
                 .IsRequired()
                 .HasColumnName("Tipo")
-                .HasColumnType("VARCHAR")
-                .HasMaxLength(20);
+                .HasColumnType("INTEGER");
         }
     }
 }
