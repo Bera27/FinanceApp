@@ -43,7 +43,9 @@ public partial class AddDespesaView : ContentPage
 
             _context.Despesas.Add(novaDespesa);
             await _context.SaveChangesAsync();
+
             await DisplayAlert("Sucesso", "Despesa Salva.", "OK");
+            await Shell.Current.GoToAsync("Despesa");
         }
         catch (Exception ex)
         { 

@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Threading.Tasks;
 using FinanceApp.Data;
 using FinanceApp.Models;
@@ -31,6 +32,8 @@ public partial class DespesaView : ContentPage
             var despesaList = await _context.Despesas.ToListAsync();
 
             CollectionViewDespesas.ItemsSource = despesaList;
+
+            CalculoDeTotal(despesaList);
         }
         catch (Exception ex)
         {
@@ -52,5 +55,14 @@ public partial class DespesaView : ContentPage
 
             await CarregarDados();
         }
+    }
+
+    public void CalculoDeTotal(IEnumerable<Despesa> despesas)
+    {
+        decimal total = despesas.Sum(x => x.Valor);
+
+        var ci = CultureInfo.GetCultureInfo("pt-BR");
+
+        txtTotal.Text = total.ToString("C", ci);
     }
 }
