@@ -9,6 +9,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -57,7 +58,7 @@
                        Grid.ColumnSpan="10"
                        Margin="0,10,130,0"/>
 
-                <Entry x:Name="precoEntry"
+                <Entry x:Name="valorEntry"
                        TextColor="ForestGreen"
                        Placeholder="0"
                        HorizontalOptions="Center"
@@ -67,57 +68,46 @@
                        WidthRequest="100"
                        Keyboard="Numeric"/>
 
-                <!-- Data -->
-                <Label Text="Data:"
+                <!-- Data da compra -->
+                <Label Text="Data da compra:"
                        Grid.Row="0"
                        Grid.Column="0"
                        Margin="0,200,0,0"/>
 
-                <DatePicker x:Name="dataPicker"
+                <DatePicker x:Name="dataCompraPck"
                             Grid.Row="0"
                             Grid.Column="1"
                             Format="dd/MM/yyyy"
                             MinimumDate="2025-01-01"
-                            Margin="-20,190,0,20"
-                            DateSelected="dataPicker_DateSelected" />
-
-                <!--Numero de parcelas-->
-                <Label Text="Parcelas:"
+                            Margin="-20,190,0,20" />
+                
+                <!-- Data Vencimento-->
+                <Label Text="Data de Vencimento:"
                        Grid.Row="1"
                        Grid.Column="0"
-                       Margin="0,10,0,30"/>
+                       Margin="0,10,0,0" />
 
-                <Border HeightRequest="45" 
-                        WidthRequest="60"
-                        StrokeShape="RoundRectangle 20"
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        Margin="-155,0,0,20">
-
-                    <Entry x:Name="parcelasEntry"
-                           Placeholder="Ex: 10" 
-                           VerticalTextAlignment="Center"
-                           Keyboard="Numeric"/>
-
-                </Border>
+                <DatePicker x:Name="dataVencimentoPck"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="5,0,0,0" />
 
                 <!-- Descrição -->
                 <Label Text="Descrição:"
                        Grid.Row="2"
                        Grid.Column="0"
-                       Margin="0,10,0,0"/>
+                       Margin="0,20,0,0"/>
 
                 <Border HeightRequest="45"
                         WidthRequest="200"
                         StrokeShape="RoundRectangle 20"
                         Grid.Row="2"
                         Grid.Column="1"
-                        Margin="5,0,0,0">
+                        Margin="-65,10,0,0">
 
                     <Entry x:Name="descricaoEntry"
                            Placeholder="Ex: Escola do Bruno" 
-                           VerticalTextAlignment="Center"
-                           Keyboard="Numeric"/>
+                           VerticalTextAlignment="Center" />
                 </Border>
 
                 <Button Text="Adicionar"

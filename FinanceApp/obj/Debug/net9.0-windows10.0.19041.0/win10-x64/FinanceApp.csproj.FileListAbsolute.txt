@@ -629,3 +629,5 @@ C:\Projetos\FinanceApp\FinanceApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64
 C:\Projetos\FinanceApp\FinanceApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\process.scale-100.png
 C:\Projetos\FinanceApp\FinanceApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\talheres.scale-100.png
 C:\Projetos\FinanceApp\FinanceApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\taxaatraso.scale-100.png
+C:\Projetos\FinanceApp\FinanceApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\trash.scale-100.png
+C:\Projetos\FinanceApp\FinanceApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\trash.scale-100.png

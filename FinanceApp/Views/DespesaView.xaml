@@ -27,16 +27,11 @@
 
             <Label
                 Text="DESPESA"
+                TextDecorations="Underline"
                 FontSize="15"
                 Grid.Row="0"
                 Grid.Column="0"
-                Margin="20,0,0,0">
-
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="Despesa_Tapped" 
-                                          NumberOfTapsRequired="1" />
-                </Label.GestureRecognizers>
-            </Label>
+                Margin="20,0,0,0" />
 
             <Label
                 Text="RENDA"
@@ -50,8 +45,64 @@
                 HeightRequest="200" 
                 WidthRequest="300" 
                 StrokeShape="RoundRectangle 15">
-            
+
+            <Image Source="adicionar.png" 
+                         HeightRequest="40"
+                         VerticalOptions="End"
+                         HorizontalOptions="End"
+                         Margin="10"
+                         >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                                          NumberOfTapsRequired="1"/>
+                </Image.GestureRecognizers>
+            </Image>
         </Border>
-        
+
+        <CollectionView x:Name="CollectionViewDespesas"
+                        Margin="5">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="5" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems Mode="Reveal">
+                                <SwipeItem Text="Excluir"
+                                           IconImageSource="trash.png"
+                                           Invoked="SwipeItem_Invoked"
+                                           CommandParameter="{Binding .}" />
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+
+                        <Border StrokeShape="RoundRectangle 40"
+                            Padding="10">
+
+                            <Grid ColumnDefinitions="*,*,*,auto"
+                              RowDefinitions="Auto">
+
+                                <Label Text="{Binding Descricao}"
+                                   Grid.Column="0"/>
+
+                                <Label Text="{Binding DataVencimento, StringFormat='{}{0:dd/MM/yyyy}'}"
+                                   FontSize="12"
+                                   Grid.Column="1" />
+
+                                <Label Text="{Binding DataPagamento, StringFormat='{}{0:dd/MM/yyyy}'}"
+                                   FontSize="12"
+                                   Grid.Column="2" />
+
+                                <Label Text="{Binding Valor, StringFormat='{}{0:C}'}"
+                                   TextColor="ForestGreen"
+                                   Grid.Column="3" />
+                            </Grid>
+                        </Border>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </StackLayout>
 </ContentPage>
