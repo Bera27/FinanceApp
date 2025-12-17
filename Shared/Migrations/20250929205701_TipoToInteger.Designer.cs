@@ -2,6 +2,7 @@
 using FinanceApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinanceApp.Shared.Migrations
 {
     [DbContext(typeof(FinanceDataContext))]
-    partial class FinanceDataContextModelSnapshot : ModelSnapshot
+    [Migration("20250929205701_TipoToInteger")]
+    partial class TipoToInteger
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.9");
@@ -21,11 +24,6 @@ namespace FinanceApp.Shared.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
-
-                    b.Property<string>("ImagemPath")
-                        .IsRequired()
-                        .HasColumnType("NVARCHAR")
-                        .HasColumnName("ImagemPath");
 
                     b.Property<string>("Nome")
                         .IsRequired()
@@ -45,84 +43,72 @@ namespace FinanceApp.Shared.Migrations
                         new
                         {
                             Id = 1,
-                            ImagemPath = "casa.png",
                             Nome = "Casa",
                             Tipo = 1
                         },
                         new
                         {
                             Id = 2,
-                            ImagemPath = "furgao.png",
                             Nome = "Carro",
                             Tipo = 1
                         },
                         new
                         {
                             Id = 3,
-                            ImagemPath = "viagem.png",
                             Nome = "Viagem",
                             Tipo = 1
                         },
                         new
                         {
                             Id = 4,
-                            ImagemPath = "taxaatraso.png",
                             Nome = "Conta",
                             Tipo = 1
                         },
                         new
                         {
                             Id = 5,
-                            ImagemPath = "talheres.png",
                             Nome = "Alimentação",
                             Tipo = 1
                         },
                         new
                         {
                             Id = 6,
-                            ImagemPath = "educacao.png",
                             Nome = "Educação",
                             Tipo = 1
                         },
                         new
                         {
                             Id = 7,
-                            ImagemPath = "primeirossocorros.png",
                             Nome = "Saúde",
                             Tipo = 1
                         },
                         new
                         {
                             Id = 8,
-                            ImagemPath = "process.png",
                             Nome = "Outros",
                             Tipo = 1
                         },
                         new
                         {
                             Id = 9,
-                            ImagemPath = "salario.png",
                             Nome = "Salário",
                             Tipo = 0
                         },
                         new
                         {
                             Id = 10,
-                            ImagemPath = "poupanca.png",
                             Nome = "Poupança",
                             Tipo = 0
                         },
                         new
                         {
                             Id = 11,
-                            ImagemPath = "investimento.png",
                             Nome = "Investimento",
                             Tipo = 0
                         },
                         new
                         {
                             Id = 12,
-                            ImagemPath = "process.png",
                             Nome = "Outros",
                             Tipo = 0
                         });

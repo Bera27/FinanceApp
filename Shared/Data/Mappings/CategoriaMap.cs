@@ -25,6 +25,11 @@ namespace FinanceApp.Data.Mappings
                 .IsRequired()
                 .HasColumnName("Tipo")
                 .HasColumnType("INTEGER");
+
+            builder.Property(x => x.ImagemPath)
+                .IsRequired()
+                .HasColumnName("ImagemPath")
+                .HasColumnType("NVARCHAR");
         }
     }
 }

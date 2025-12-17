@@ -14,6 +14,8 @@ namespace FinanceApp.Models
         public string Nome { get; set; }
         public CategoriaTipo Tipo { get; set; }
 
+        public string ImagemPath { get; set; }
+
         public ICollection<Despesa> Despesas { get; set; } = new List<Despesa>();
         public ICollection<MetaOrcamento> MetaOrcamentos { get; set; } = new List<MetaOrcamento>();
         public ICollection<Receita> Receitas { get; set; } = new List<Receita>();
