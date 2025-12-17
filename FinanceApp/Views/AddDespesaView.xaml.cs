@@ -1,12 +1,14 @@
 using System.Globalization;
 using FinanceApp.Data;
 using FinanceApp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace FinanceApp.Views;
 
 public partial class AddDespesaView : ContentPage
 {
     private readonly FinanceDataContext _context;
+    private int _selectedCategoriaId;
 
     public AddDespesaView(FinanceDataContext context)
     {
@@ -38,7 +40,7 @@ public partial class AddDespesaView : ContentPage
                 DataPagamento = dataCompra,
                 DataVencimento = dataVencimento,
                 Descricao = descricao,
-                CategoriaId = 6
+                CategoriaId = _selectedCategoriaId
             };
 
             _context.Despesas.Add(novaDespesa);
@@ -50,6 +52,36 @@ public partial class AddDespesaView : ContentPage
         catch (Exception ex)
         { 
            await DisplayAlert($"Ops", ex.Message, "OK"); 
+        }
+    }
+
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await LoadImages();
+    }
+
+    private void CVCategoria_SelectionChanged(object sender ,SelectionChangedEventArgs e)
+    {
+        var selected = e.CurrentSelection.FirstOrDefault() as Categoria;
+
+        if (selected != null)
+            _selectedCategoriaId = selected.Id;
+
+        else
+            _selectedCategoriaId = 0;
+    }
+
+    private async Task LoadImages()
+    {
+        try
+        {
+            var categorias = await _context.Categorias.ToListAsync();
+            CVCategoria.ItemsSource = categorias;
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Ops", $"Falha ao carregar categorias: {ex.Message}", "Ok");
         }
     }
 }

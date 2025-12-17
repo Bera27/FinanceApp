@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinanceApp.Views.AddDespesaView"
              Shell.NavBarIsVisible="False">
-    
+
     <StackLayout>
         <Grid>
             <Grid.RowDefinitions>
@@ -42,19 +42,41 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                
-                
+
+                <CollectionView x:Name="CVCategoria"
+                                SelectionMode="Single"
+                                SelectionChanged="CVCategoria_SelectionChanged"
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2" >
+
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Horizontal" Span="2"/>
+                    </CollectionView.ItemsLayout>
+                    
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding ImagemPath}" WidthRequest="40" HeightRequest="40" />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+
                 <!-- Valor -->
                 <Label Text="R$"
                        TextColor="ForestGreen"
                        FontSize="20"
                        HorizontalOptions="Center"
+                       Grid.Row="0"
                        Grid.ColumnSpan="10"
                        Margin="0,10,130,0"/>
 
@@ -63,6 +85,7 @@
                        Placeholder="0"
                        HorizontalOptions="Center"
                        VerticalOptions="Start"
+                       Grid.Row="0"
                        Grid.ColumnSpan="10"
                        HeightRequest="10"
                        WidthRequest="100"
@@ -70,38 +93,38 @@
 
                 <!-- Data da compra -->
                 <Label Text="Data da compra:"
-                       Grid.Row="0"
+                       Grid.Row="2"
                        Grid.Column="0"
-                       Margin="0,200,0,0"/>
+                       Margin="0,90,0,0"/>
 
                 <DatePicker x:Name="dataCompraPck"
-                            Grid.Row="0"
+                            Grid.Row="2"
                             Grid.Column="1"
                             Format="dd/MM/yyyy"
                             MinimumDate="2025-01-01"
-                            Margin="-20,190,0,20" />
+                            Margin="-20,80,0,20" />
                 
                 <!-- Data Vencimento-->
                 <Label Text="Data de Vencimento:"
-                       Grid.Row="1"
+                       Grid.Row="3"
                        Grid.Column="0"
                        Margin="0,10,0,0" />
 
                 <DatePicker x:Name="dataVencimentoPck"
-                            Grid.Row="1"
+                            Grid.Row="3"
                             Grid.Column="1"
                             Margin="5,0,0,0" />
 
                 <!-- Descrição -->
                 <Label Text="Descrição:"
-                       Grid.Row="2"
+                       Grid.Row="4"
                        Grid.Column="0"
                        Margin="0,20,0,0"/>
 
                 <Border HeightRequest="45"
                         WidthRequest="200"
                         StrokeShape="RoundRectangle 20"
-                        Grid.Row="2"
+                        Grid.Row="4"
                         Grid.Column="1"
                         Margin="-65,10,0,0">
 
@@ -111,7 +134,7 @@
                 </Border>
 
                 <Button Text="Adicionar"
-                        Grid.Row="3"
+                        Grid.Row="5"
                         Grid.ColumnSpan="2"
                         HorizontalOptions="Center"
                         WidthRequest="150"
