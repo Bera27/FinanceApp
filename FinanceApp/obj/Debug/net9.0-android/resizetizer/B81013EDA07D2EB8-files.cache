@@ -1,13 +1,17 @@
 ﻿obj\Debug\net9.0-android\resizetizer\r\drawable\adicionar.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\bolsadinheiro.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\casa.png
+obj\Debug\net9.0-android\resizetizer\r\drawable\educacao.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\furgao.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\investimento.png
+obj\Debug\net9.0-android\resizetizer\r\drawable\poupanca.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\primeirossocorros.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\process.png
+obj\Debug\net9.0-android\resizetizer\r\drawable\salario.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\talheres.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\taxaatraso.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\trash.png
+obj\Debug\net9.0-android\resizetizer\r\drawable\viagem.png
 obj\Debug\net9.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png
 obj\Debug\net9.0-android\resizetizer\r\drawable-mdpi\dotnet_bot.png
 obj\Debug\net9.0-android\resizetizer\r\drawable-xhdpi\dotnet_bot.png

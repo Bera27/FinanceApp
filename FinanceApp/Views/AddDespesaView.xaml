@@ -57,15 +57,17 @@
                                 SelectionChanged="CVCategoria_SelectionChanged"
                                 Grid.Row="1"
                                 Grid.Column="0"
-                                Grid.ColumnSpan="2" >
+                                Grid.ColumnSpan="2" 
+                                HorizontalOptions="Center"  
+                                Margin="10">
 
                     <CollectionView.ItemsLayout>
-                        <GridItemsLayout Orientation="Horizontal" Span="2"/>
+                        <GridItemsLayout Orientation="Horizontal" Span="2" />
                     </CollectionView.ItemsLayout>
                     
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Image Source="{Binding ImagemPath}" WidthRequest="40" HeightRequest="40" />
+                            <Image Source="{Binding ImagemPath}" WidthRequest="50" HeightRequest="45" />
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
@@ -95,14 +97,14 @@
                 <Label Text="Data da compra:"
                        Grid.Row="2"
                        Grid.Column="0"
-                       Margin="0,90,0,0"/>
+                       Margin="0,60,0,0"/>
 
                 <DatePicker x:Name="dataCompraPck"
                             Grid.Row="2"
                             Grid.Column="1"
                             Format="dd/MM/yyyy"
                             MinimumDate="2025-01-01"
-                            Margin="-20,80,0,20" />
+                            Margin="-20,50,0,20" />
                 
                 <!-- Data Vencimento-->
                 <Label Text="Data de Vencimento:"

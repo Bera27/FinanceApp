@@ -76,7 +76,10 @@ public partial class AddDespesaView : ContentPage
     {
         try
         {
-            var categorias = await _context.Categorias.ToListAsync();
+            var categorias = await _context.Categorias
+                                           .Where(c => c.Tipo == CategoriaTipo.Despesa)
+                                           .AsNoTracking()
+                                           .ToListAsync();
             CVCategoria.ItemsSource = categorias;
         }
         catch (Exception ex)
