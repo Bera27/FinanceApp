@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
              x:Class="FinanceApp.Views.DespesaView"
              Shell.NavBarIsVisible="False">
-    
-    <StackLayout>
 
-        <!-- Header -->
-        <Label 
+    <ScrollView>
+        <StackLayout>
+
+            <!-- Header -->
+            <Label 
             Text="Total"
             FontSize="20"
             HorizontalOptions="Center" />
 
-        <Label
+            <Label
             x:Name="txtTotal"
             Text="R$0,00" 
             FontSize="20"
             HorizontalOptions="Center"/>
 
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
 
-            <Label
+                <Label
                 Text="DESPESA"
                 TextDecorations="Underline"
                 FontSize="15"
@@ -36,80 +38,87 @@
                 Grid.Column="0"
                 Margin="20,0,0,0" />
 
-            <Label
+                <Label
                 Text="RENDA"
                 FontSize="15"
                 Grid.Row="0"
                 Grid.Column="1" 
                 Margin="0,0,20,0"/>
-        </Grid>
+            </Grid>
 
-        <!-- Section -->
-        <Border StrokeThickness="2" 
+            <!-- Section -->
+            <Border StrokeThickness="2" 
                 HeightRequest="200" 
                 WidthRequest="300" 
                 StrokeShape="RoundRectangle 15">
 
-            <Image Source="adicionar.png" 
+                <Grid>
+                    <lvc:PieChart x:Name="GraficoDespesas"
+                              HeightRequest="200"
+                              />
+
+                    <Image Source="adicionar.png" 
                          HeightRequest="40"
                          VerticalOptions="End"
                          HorizontalOptions="End"
                          Margin="10"
                          >
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
                                           NumberOfTapsRequired="1"/>
-                </Image.GestureRecognizers>
-            </Image>
-        </Border>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+            </Border>
 
-        <!-- Lista das despesas -->
-        <CollectionView x:Name="CollectionViewDespesas"
+            <!-- Lista das despesas -->
+            <CollectionView x:Name="CollectionViewDespesas"
                         Margin="5">
 
-            <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical" ItemSpacing="5" />
-            </CollectionView.ItemsLayout>
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="5" />
+                </CollectionView.ItemsLayout>
 
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <SwipeView>
-                        <SwipeView.RightItems>
-                            <SwipeItems Mode="Reveal">
-                                <SwipeItem Text="Excluir"
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems Mode="Reveal">
+                                    <SwipeItem Text="Excluir"
                                            IconImageSource="trash.png"
                                            BackgroundColor="Red"
                                            Invoked="SwipeItem_Invoked"
                                            CommandParameter="{Binding .}" />
-                            </SwipeItems>
-                        </SwipeView.RightItems>
+                                </SwipeItems>
+                            </SwipeView.RightItems>
 
-                        <Border StrokeShape="RoundRectangle 40"
+                            <Border StrokeShape="RoundRectangle 40"
                             Padding="10">
 
-                            <Grid ColumnDefinitions="auto,*,auto"
+                                <Grid ColumnDefinitions="auto,*,auto"
                               RowDefinitions="Auto">
 
-                                <Image Source="{Binding Categoria.ImagemPath}"
+                                    <Image Source="{Binding Categoria.ImagemPath}"
                                        WidthRequest="38"
                                        Grid.Column="0" />
 
-                                <Label Text="{Binding Descricao}" 
+                                    <Label Text="{Binding Descricao}" 
                                        VerticalTextAlignment="Center" 
                                        Padding="5"
                                        FontSize="15"
                                        Grid.Column="1"/>
 
-                                <Label Text="{Binding Valor, StringFormat='{}{0:C}'}"
+                                    <Label Text="{Binding Valor, StringFormat='{}{0:C}'}"
                                        TextColor="ForestGreen"
                                        VerticalTextAlignment="Center"
                                        FontSize="15"
                                        Grid.Column="2" />
-                            </Grid>
-                        </Border>
-                    </SwipeView>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </StackLayout>
+                                </Grid>
+                            </Border>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

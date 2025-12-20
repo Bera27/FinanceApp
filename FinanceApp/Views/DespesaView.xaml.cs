@@ -2,7 +2,11 @@ using System.Globalization;
 using System.Threading.Tasks;
 using FinanceApp.Data;
 using FinanceApp.Models;
+using LiveChartsCore;
+using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore.SkiaSharpView.Painting;
 using Microsoft.EntityFrameworkCore;
+using SkiaSharp;
 
 namespace FinanceApp.Views;
 
@@ -36,6 +40,7 @@ public partial class DespesaView : ContentPage
 
             CollectionViewDespesas.ItemsSource = despesaList;
             CalculoDeTotal(despesaList);
+            CarregarGrafico(despesaList);
         }
         catch (Exception ex)
         {
@@ -68,5 +73,20 @@ public partial class DespesaView : ContentPage
         var ci = CultureInfo.GetCultureInfo("pt-BR");
 
         txtTotal.Text = total.ToString("C", ci);
+    }
+
+    private void CarregarGrafico(List<Despesa> despesas)
+    {
+        var series = despesas
+            .GroupBy(d => d.Categoria.Nome)
+            .Select(g => new PieSeries<decimal>
+            {
+                Name = g.Key,
+                Values = new[] { g.Sum(x => x.Valor) }
+            })
+            .Cast<ISeries>()
+            .ToArray();
+
+        GraficoDespesas.Series = series;
     }
 }

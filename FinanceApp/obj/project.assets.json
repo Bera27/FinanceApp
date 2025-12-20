@@ -18,6 +18,52 @@
           }
         }
       },
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Android": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Android/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/HarfBuzzSharp.NativeAssets.Android.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/android-arm/native/libHarfBuzzSharp.so": {
+            "assetType": "native",
+            "rid": "android-arm"
+          },
+          "runtimes/android-arm64/native/libHarfBuzzSharp.so": {
+            "assetType": "native",
+            "rid": "android-arm64"
+          },
+          "runtimes/android-x64/native/libHarfBuzzSharp.so": {
+            "assetType": "native",
+            "rid": "android-x64"
+          },
+          "runtimes/android-x86/native/libHarfBuzzSharp.so": {
+            "assetType": "native",
+            "rid": "android-x86"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -27,6 +73,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -1006,6 +1102,120 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Android": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-android34.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Android/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/SkiaSharp.NativeAssets.Android.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/android-arm/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "android-arm"
+          },
+          "runtimes/android-arm64/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "android-arm64"
+          },
+          "runtimes/android-x64/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "android-x64"
+          },
+          "runtimes/android-x86/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "android-x86"
+          }
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Android.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Android.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -3320,6 +3530,37 @@
           }
         }
       },
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Android": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Android/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "native": {
+          "runtimes/android-arm64/native/libHarfBuzzSharp.so": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/HarfBuzzSharp.NativeAssets.Android.targets": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -3329,6 +3570,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -4308,6 +4599,105 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Android": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-android34.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Android/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "native": {
+          "runtimes/android-arm64/native/libSkiaSharp.so": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/SkiaSharp.NativeAssets.Android.targets": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Android.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Android.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -6499,6 +6889,37 @@
           }
         }
       },
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Android": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Android/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "native": {
+          "runtimes/android-x64/native/libHarfBuzzSharp.so": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/HarfBuzzSharp.NativeAssets.Android.targets": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -6508,6 +6929,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -7487,6 +7958,105 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Android": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-android34.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Android/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "native": {
+          "runtimes/android-x64/native/libSkiaSharp.so": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/SkiaSharp.NativeAssets.Android.targets": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Android.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Android.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -9678,6 +10248,34 @@
           }
         }
       },
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Android": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Android/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/HarfBuzzSharp.NativeAssets.Android.targets": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -9687,6 +10285,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -10666,6 +11314,102 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Android": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-android34.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Android/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/SkiaSharp.NativeAssets.Android.targets": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Android.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Android.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -12857,6 +13601,34 @@
           }
         }
       },
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Android": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Android/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/HarfBuzzSharp.NativeAssets.Android.targets": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -12866,6 +13638,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -13845,6 +14667,102 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Android": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-android34.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Android/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/SkiaSharp.NativeAssets.Android.targets": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Android.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Android.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -16036,6 +16954,34 @@
           }
         }
       },
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Android": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Android/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/HarfBuzzSharp.NativeAssets.Android.targets": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -16045,6 +16991,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -17024,6 +18020,102 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Android": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-android34.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Android/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/SkiaSharp.NativeAssets.Android.targets": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Android.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Android.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -19196,6 +20288,76 @@
       }
     },
     "net9.0-ios18.5": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.iOS": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-ios17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.iOS/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-ios17.0/HarfBuzzSharp.NativeAssets.iOS.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/ios/native/libHarfBuzzSharp.framework/Headers/libHarfBuzzSharp.h": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/ios/native/libHarfBuzzSharp.framework/Info.plist": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/ios/native/libHarfBuzzSharp.framework/Modules/module.modulemap": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/ios/native/libHarfBuzzSharp.framework/_CodeSignature/CodeResources": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/ios/native/libHarfBuzzSharp.framework/libHarfBuzzSharp": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/iossimulator/native/libHarfBuzzSharp.framework/Headers/libHarfBuzzSharp.h": {
+            "assetType": "native",
+            "rid": "iossimulator"
+          },
+          "runtimes/iossimulator/native/libHarfBuzzSharp.framework/Info.plist": {
+            "assetType": "native",
+            "rid": "iossimulator"
+          },
+          "runtimes/iossimulator/native/libHarfBuzzSharp.framework/Modules/module.modulemap": {
+            "assetType": "native",
+            "rid": "iossimulator"
+          },
+          "runtimes/iossimulator/native/libHarfBuzzSharp.framework/_CodeSignature/CodeResources": {
+            "assetType": "native",
+            "rid": "iossimulator"
+          },
+          "runtimes/iossimulator/native/libHarfBuzzSharp.framework/libHarfBuzzSharp": {
+            "assetType": "native",
+            "rid": "iossimulator"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -19205,6 +20367,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -20173,6 +21385,128 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.iOS": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-ios17.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.iOS/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-ios17.0/SkiaSharp.NativeAssets.iOS.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/ios/native/libSkiaSharp.framework/Info.plist": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/ios/native/libSkiaSharp.framework/_CodeSignature/CodeResources": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/ios/native/libSkiaSharp.framework/libSkiaSharp": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/iossimulator/native/libSkiaSharp.framework/Info.plist": {
+            "assetType": "native",
+            "rid": "iossimulator"
+          },
+          "runtimes/iossimulator/native/libSkiaSharp.framework/_CodeSignature/CodeResources": {
+            "assetType": "native",
+            "rid": "iossimulator"
+          },
+          "runtimes/iossimulator/native/libSkiaSharp.framework/libSkiaSharp": {
+            "assetType": "native",
+            "rid": "iossimulator"
+          }
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -20606,6 +21940,34 @@
       }
     },
     "net9.0-ios18.5/android-arm64": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.iOS": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-ios17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.iOS/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-ios17.0/HarfBuzzSharp.NativeAssets.iOS.targets": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -20615,6 +21977,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -21583,6 +22995,102 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.iOS": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-ios17.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.iOS/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-ios17.0/SkiaSharp.NativeAssets.iOS.targets": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -21893,6 +23401,34 @@
       }
     },
     "net9.0-ios18.5/android-x64": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.iOS": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-ios17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.iOS/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-ios17.0/HarfBuzzSharp.NativeAssets.iOS.targets": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -21902,6 +23438,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -22870,6 +24456,102 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.iOS": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-ios17.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.iOS/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-ios17.0/SkiaSharp.NativeAssets.iOS.targets": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -23180,6 +24862,41 @@
       }
     },
     "net9.0-ios18.5/ios-arm64": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.iOS": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-ios17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.iOS/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "native": {
+          "runtimes/ios/native/libHarfBuzzSharp.framework/Headers/libHarfBuzzSharp.h": {},
+          "runtimes/ios/native/libHarfBuzzSharp.framework/Info.plist": {},
+          "runtimes/ios/native/libHarfBuzzSharp.framework/Modules/module.modulemap": {},
+          "runtimes/ios/native/libHarfBuzzSharp.framework/_CodeSignature/CodeResources": {},
+          "runtimes/ios/native/libHarfBuzzSharp.framework/libHarfBuzzSharp": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-ios17.0/HarfBuzzSharp.NativeAssets.iOS.targets": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -23189,6 +24906,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -24157,6 +25924,107 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.iOS": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-ios17.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.iOS/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "native": {
+          "runtimes/ios/native/libSkiaSharp.framework/Info.plist": {},
+          "runtimes/ios/native/libSkiaSharp.framework/_CodeSignature/CodeResources": {},
+          "runtimes/ios/native/libSkiaSharp.framework/libSkiaSharp": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-ios17.0/SkiaSharp.NativeAssets.iOS.targets": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -24467,6 +26335,41 @@
       }
     },
     "net9.0-ios18.5/maccatalyst-x64": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.iOS": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-ios17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.iOS/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "native": {
+          "runtimes/ios/native/libHarfBuzzSharp.framework/Headers/libHarfBuzzSharp.h": {},
+          "runtimes/ios/native/libHarfBuzzSharp.framework/Info.plist": {},
+          "runtimes/ios/native/libHarfBuzzSharp.framework/Modules/module.modulemap": {},
+          "runtimes/ios/native/libHarfBuzzSharp.framework/_CodeSignature/CodeResources": {},
+          "runtimes/ios/native/libHarfBuzzSharp.framework/libHarfBuzzSharp": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-ios17.0/HarfBuzzSharp.NativeAssets.iOS.targets": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -24476,6 +26379,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -25444,6 +27397,107 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.iOS": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-ios17.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.iOS/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "native": {
+          "runtimes/ios/native/libSkiaSharp.framework/Info.plist": {},
+          "runtimes/ios/native/libSkiaSharp.framework/_CodeSignature/CodeResources": {},
+          "runtimes/ios/native/libSkiaSharp.framework/libSkiaSharp": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-ios17.0/SkiaSharp.NativeAssets.iOS.targets": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -25754,6 +27808,34 @@
       }
     },
     "net9.0-ios18.5/win10-x64": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.iOS": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-ios17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.iOS/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-ios17.0/HarfBuzzSharp.NativeAssets.iOS.targets": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -25763,6 +27845,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -26733,6 +28865,102 @@
           "buildTransitive/Mono.TextTemplating.targets": {}
         }
       },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.iOS": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-ios17.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.iOS/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-ios17.0/SkiaSharp.NativeAssets.iOS.targets": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "SourceGear.sqlite3/3.50.4.2": {
         "type": "package",
         "compile": {
@@ -27038,6 +29266,40 @@
       }
     },
     "net9.0-maccatalyst18.5": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.MacCatalyst": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.MacCatalyst/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-maccatalyst17.0/HarfBuzzSharp.NativeAssets.MacCatalyst.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/maccatalyst/native/libHarfBuzzSharp.framework.zip": {
+            "assetType": "native",
+            "rid": "maccatalyst"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -27047,6 +29309,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -28015,6 +30327,108 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.MacCatalyst": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-maccatalyst17.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.MacCatalyst/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-maccatalyst17.0/SkiaSharp.NativeAssets.MacCatalyst.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/maccatalyst/native/libSkiaSharp.framework.zip": {
+            "assetType": "native",
+            "rid": "maccatalyst"
+          }
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -28448,6 +30862,34 @@
       }
     },
     "net9.0-maccatalyst18.5/android-arm64": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.MacCatalyst": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.MacCatalyst/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-maccatalyst17.0/HarfBuzzSharp.NativeAssets.MacCatalyst.targets": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -28457,6 +30899,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -29425,6 +31917,102 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.MacCatalyst": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-maccatalyst17.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.MacCatalyst/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-maccatalyst17.0/SkiaSharp.NativeAssets.MacCatalyst.targets": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -29735,6 +32323,34 @@
       }
     },
     "net9.0-maccatalyst18.5/android-x64": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.MacCatalyst": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.MacCatalyst/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-maccatalyst17.0/HarfBuzzSharp.NativeAssets.MacCatalyst.targets": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -29744,6 +32360,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -30712,6 +33378,102 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.MacCatalyst": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-maccatalyst17.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.MacCatalyst/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-maccatalyst17.0/SkiaSharp.NativeAssets.MacCatalyst.targets": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -31022,6 +33784,34 @@
       }
     },
     "net9.0-maccatalyst18.5/ios-arm64": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.MacCatalyst": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.MacCatalyst/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-maccatalyst17.0/HarfBuzzSharp.NativeAssets.MacCatalyst.targets": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -31031,6 +33821,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -31999,6 +34839,102 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.MacCatalyst": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-maccatalyst17.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.MacCatalyst/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-maccatalyst17.0/SkiaSharp.NativeAssets.MacCatalyst.targets": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -32309,6 +35245,37 @@
       }
     },
     "net9.0-maccatalyst18.5/maccatalyst-x64": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.MacCatalyst": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.MacCatalyst/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "native": {
+          "runtimes/maccatalyst/native/libHarfBuzzSharp.framework.zip": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-maccatalyst17.0/HarfBuzzSharp.NativeAssets.MacCatalyst.targets": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -32318,6 +35285,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -33286,6 +36303,105 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.MacCatalyst": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-maccatalyst17.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.MacCatalyst/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "native": {
+          "runtimes/maccatalyst/native/libSkiaSharp.framework.zip": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-maccatalyst17.0/SkiaSharp.NativeAssets.MacCatalyst.targets": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -33596,6 +36712,34 @@
       }
     },
     "net9.0-maccatalyst18.5/win10-x64": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.MacCatalyst": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.MacCatalyst/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-maccatalyst17.0/HarfBuzzSharp.NativeAssets.MacCatalyst.targets": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -33605,6 +36749,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -34575,6 +37769,102 @@
           "buildTransitive/Mono.TextTemplating.targets": {}
         }
       },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.MacCatalyst": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-maccatalyst17.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.MacCatalyst/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-maccatalyst17.0/SkiaSharp.NativeAssets.MacCatalyst.targets": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.0/SkiaSharp.Views.iOS.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "SourceGear.sqlite3/3.50.4.2": {
         "type": "package",
         "compile": {
@@ -34880,6 +38170,45 @@
       }
     },
     "net9.0-windows10.0.19041": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Win32": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Win32/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/libHarfBuzzSharp.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/libHarfBuzzSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/libHarfBuzzSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -34889,6 +38218,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -36109,6 +39488,202 @@
           "buildTransitive/Mono.TextTemplating.targets": {}
         }
       },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-windows10.0.19041/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Win32/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.WinUI/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/lib/net8.0-windows10.0.19041.0/SkiaSharp.Views.WinUI.Native.Projection.dll": {
+            "assetType": "runtime",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-arm64/native/SkiaSharp.Views.WinUI.Native.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-arm64/native/SkiaSharp.Views.WinUI.Native.winmd": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-arm64/native/libEGL.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-arm64/native/libGLESv2.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/lib/net8.0-windows10.0.19041.0/SkiaSharp.Views.WinUI.Native.Projection.dll": {
+            "assetType": "runtime",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/SkiaSharp.Views.WinUI.Native.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/SkiaSharp.Views.WinUI.Native.winmd": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/libEGL.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/libGLESv2.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/lib/net8.0-windows10.0.19041.0/SkiaSharp.Views.WinUI.Native.Projection.dll": {
+            "assetType": "runtime",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/SkiaSharp.Views.WinUI.Native.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/SkiaSharp.Views.WinUI.Native.winmd": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/libEGL.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/libGLESv2.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-windows10.0.19041/SkiaSharp.Views.targets": {}
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0",
+          "SkiaSharp.Views.WinUI": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.WinUI/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.WindowsAppSDK": "1.4.230913002",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.NativeAssets.WinUI": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Windows.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Windows.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "SourceGear.sqlite3/3.50.4.2": {
         "type": "package",
         "compile": {
@@ -36540,6 +40115,31 @@
       }
     },
     "net9.0-windows10.0.19041/android-arm64": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Win32": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Win32/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -36549,6 +40149,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -37705,6 +41355,126 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-windows10.0.19041/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Win32/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.WinUI/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-windows10.0.19041/SkiaSharp.Views.targets": {}
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0",
+          "SkiaSharp.Views.WinUI": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.WinUI/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.WindowsAppSDK": "1.4.230913002",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.NativeAssets.WinUI": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Windows.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Windows.dll": {
+            "related": ".pdb"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -38015,6 +41785,31 @@
       }
     },
     "net9.0-windows10.0.19041/android-x64": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Win32": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Win32/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -38024,6 +41819,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -39180,6 +43025,126 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-windows10.0.19041/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Win32/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.WinUI/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-windows10.0.19041/SkiaSharp.Views.targets": {}
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0",
+          "SkiaSharp.Views.WinUI": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.WinUI/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.WindowsAppSDK": "1.4.230913002",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.NativeAssets.WinUI": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Windows.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Windows.dll": {
+            "related": ".pdb"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -39490,6 +43455,31 @@
       }
     },
     "net9.0-windows10.0.19041/ios-arm64": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Win32": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Win32/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -39499,6 +43489,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -40655,6 +44695,126 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-windows10.0.19041/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Win32/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.WinUI/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-windows10.0.19041/SkiaSharp.Views.targets": {}
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0",
+          "SkiaSharp.Views.WinUI": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.WinUI/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.WindowsAppSDK": "1.4.230913002",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.NativeAssets.WinUI": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Windows.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Windows.dll": {
+            "related": ".pdb"
+          }
         }
       },
       "SourceGear.sqlite3/3.50.4.2": {
@@ -40965,6 +45125,31 @@
       }
     },
     "net9.0-windows10.0.19041/maccatalyst-x64": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Win32": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Win32/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -40974,6 +45159,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -42132,6 +46367,126 @@
           "buildTransitive/Mono.TextTemplating.targets": {}
         }
       },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-windows10.0.19041/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Win32/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.WinUI/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-windows10.0.19041/SkiaSharp.Views.targets": {}
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0",
+          "SkiaSharp.Views.WinUI": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.WinUI/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.WindowsAppSDK": "1.4.230913002",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.NativeAssets.WinUI": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Windows.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Windows.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "SourceGear.sqlite3/3.50.4.2": {
         "type": "package",
         "compile": {
@@ -42440,6 +46795,34 @@
       }
     },
     "net9.0-windows10.0.19041/win10-x64": {
+      "HarfBuzzSharp/8.3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Win32": "8.3.1.1"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/HarfBuzzSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Win32/8.3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/libHarfBuzzSharp.dll": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -42449,6 +46832,56 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore/2.0.0-rc6.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "SkiaSharp": "2.88.9",
+          "SkiaSharp.HarfBuzz": "2.88.9"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+        "type": "package",
+        "dependencies": {
+          "LiveChartsCore": "2.0.0-rc6.1",
+          "LiveChartsCore.SkiaSharpView": "2.0.0-rc6.1",
+          "SkiaSharp.HarfBuzz": "3.119.0",
+          "SkiaSharp.Views.Maui.Controls": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.Maui.dll": {
             "related": ".xml"
           }
         }
@@ -43617,6 +48050,135 @@
           "buildTransitive/Mono.TextTemplating.targets": {}
         }
       },
+      "SkiaSharp/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "3.119.0"
+        },
+        "compile": {
+          "ref/net8.0-windows10.0.19041/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "8.3.1.1",
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SkiaSharp.HarfBuzz.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Win32/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/libSkiaSharp.dll": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.WinUI/3.119.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/_._": {}
+        },
+        "runtime": {
+          "runtimes/win-x64/lib/net8.0-windows10.0.19041.0/SkiaSharp.Views.WinUI.Native.Projection.dll": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/SkiaSharp.Views.WinUI.Native.dll": {},
+          "runtimes/win-x64/native/SkiaSharp.Views.WinUI.Native.winmd": {},
+          "runtimes/win-x64/native/libEGL.dll": {},
+          "runtimes/win-x64/native/libGLESv2.dll": {}
+        }
+      },
+      "SkiaSharp.Views/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net8.0-windows10.0.19041/SkiaSharp.Views.targets": {}
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views.Maui.Core": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Controls.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Core": "8.0.82",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.Views": "3.119.0",
+          "SkiaSharp.Views.WinUI": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Core.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "SkiaSharp.Views.WinUI/3.119.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.WindowsAppSDK": "1.4.230913002",
+          "SkiaSharp": "3.119.0",
+          "SkiaSharp.NativeAssets.WinUI": "3.119.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Windows.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Windows.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "SourceGear.sqlite3/3.50.4.2": {
         "type": "package",
         "compile": {
@@ -43945,6 +48507,137 @@
         "readme.md"
       ]
     },
+    "HarfBuzzSharp/8.3.1.1": {
+      "sha512": "tLZN66oe/uiRPTZfrCU4i8ScVGwqHNh5MHrXj0yVf4l7Mz0FhTGnQ71RGySROTmdognAs0JtluHkL41pIabWuQ==",
+      "type": "package",
+      "path": "harfbuzzsharp/8.3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "harfbuzzsharp.8.3.1.1.nupkg.sha512",
+        "harfbuzzsharp.nuspec",
+        "icon.png",
+        "lib/net462/HarfBuzzSharp.dll",
+        "lib/net462/HarfBuzzSharp.pdb",
+        "lib/net6.0/HarfBuzzSharp.dll",
+        "lib/net6.0/HarfBuzzSharp.pdb",
+        "lib/net8.0-android34.0/HarfBuzzSharp.dll",
+        "lib/net8.0-android34.0/HarfBuzzSharp.pdb",
+        "lib/net8.0-android34.0/HarfBuzzSharp.xml",
+        "lib/net8.0-ios17.0/HarfBuzzSharp.dll",
+        "lib/net8.0-ios17.0/HarfBuzzSharp.pdb",
+        "lib/net8.0-maccatalyst17.0/HarfBuzzSharp.dll",
+        "lib/net8.0-maccatalyst17.0/HarfBuzzSharp.pdb",
+        "lib/net8.0-macos14.0/HarfBuzzSharp.dll",
+        "lib/net8.0-macos14.0/HarfBuzzSharp.pdb",
+        "lib/net8.0-tizen7.0/HarfBuzzSharp.dll",
+        "lib/net8.0-tizen7.0/HarfBuzzSharp.pdb",
+        "lib/net8.0-tvos17.0/HarfBuzzSharp.dll",
+        "lib/net8.0-tvos17.0/HarfBuzzSharp.pdb",
+        "lib/net8.0-windows10.0.19041/HarfBuzzSharp.dll",
+        "lib/net8.0-windows10.0.19041/HarfBuzzSharp.pdb",
+        "lib/net8.0/HarfBuzzSharp.dll",
+        "lib/net8.0/HarfBuzzSharp.pdb",
+        "lib/netstandard2.0/HarfBuzzSharp.dll",
+        "lib/netstandard2.0/HarfBuzzSharp.pdb",
+        "lib/netstandard2.1/HarfBuzzSharp.dll",
+        "lib/netstandard2.1/HarfBuzzSharp.pdb"
+      ]
+    },
+    "HarfBuzzSharp.NativeAssets.Android/8.3.1.1": {
+      "sha512": "XyyWJdGDwhz065vt3jL/Yk5Vvq+7/sn72wpCLGNOxamt8Ha83W13xTbhddQ1e+PGKmgxfsLAs/3hwJ+azQa7GQ==",
+      "type": "package",
+      "path": "harfbuzzsharp.nativeassets.android/8.3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "buildTransitive/net8.0-android34.0/HarfBuzzSharp.NativeAssets.Android.targets",
+        "harfbuzzsharp.nativeassets.android.8.3.1.1.nupkg.sha512",
+        "harfbuzzsharp.nativeassets.android.nuspec",
+        "icon.png",
+        "lib/net8.0-android34.0/_._",
+        "runtimes/android-arm/native/libHarfBuzzSharp.so",
+        "runtimes/android-arm64/native/libHarfBuzzSharp.so",
+        "runtimes/android-x64/native/libHarfBuzzSharp.so",
+        "runtimes/android-x86/native/libHarfBuzzSharp.so"
+      ]
+    },
+    "HarfBuzzSharp.NativeAssets.iOS/8.3.1.1": {
+      "sha512": "JNGHDIteZNRXv7Aj5OcVeolWqUU7YzLXBbLV79a4cot+BEUHagocP2Ed2qAfkr2a2B2Ena6BXOta7bBt2xHEtw==",
+      "type": "package",
+      "path": "harfbuzzsharp.nativeassets.ios/8.3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "buildTransitive/net8.0-ios17.0/HarfBuzzSharp.NativeAssets.iOS.targets",
+        "harfbuzzsharp.nativeassets.ios.8.3.1.1.nupkg.sha512",
+        "harfbuzzsharp.nativeassets.ios.nuspec",
+        "icon.png",
+        "lib/net8.0-ios17.0/_._",
+        "runtimes/ios/native/libHarfBuzzSharp.framework/Headers/libHarfBuzzSharp.h",
+        "runtimes/ios/native/libHarfBuzzSharp.framework/Info.plist",
+        "runtimes/ios/native/libHarfBuzzSharp.framework/Modules/module.modulemap",
+        "runtimes/ios/native/libHarfBuzzSharp.framework/_CodeSignature/CodeResources",
+        "runtimes/ios/native/libHarfBuzzSharp.framework/libHarfBuzzSharp",
+        "runtimes/iossimulator/native/libHarfBuzzSharp.framework/Headers/libHarfBuzzSharp.h",
+        "runtimes/iossimulator/native/libHarfBuzzSharp.framework/Info.plist",
+        "runtimes/iossimulator/native/libHarfBuzzSharp.framework/Modules/module.modulemap",
+        "runtimes/iossimulator/native/libHarfBuzzSharp.framework/_CodeSignature/CodeResources",
+        "runtimes/iossimulator/native/libHarfBuzzSharp.framework/libHarfBuzzSharp"
+      ]
+    },
+    "HarfBuzzSharp.NativeAssets.MacCatalyst/8.3.1.1": {
+      "sha512": "vG+L7SUBa/VDaNu+z2ebIQZ4Sp6ZcmHlhsEKrHL3rZeTSVftOsKSOzSEDS97qzwYadPnlY9f9ZySuOoUTraqBg==",
+      "type": "package",
+      "path": "harfbuzzsharp.nativeassets.maccatalyst/8.3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "buildTransitive/net8.0-maccatalyst17.0/HarfBuzzSharp.NativeAssets.MacCatalyst.targets",
+        "harfbuzzsharp.nativeassets.maccatalyst.8.3.1.1.nupkg.sha512",
+        "harfbuzzsharp.nativeassets.maccatalyst.nuspec",
+        "icon.png",
+        "lib/net8.0-maccatalyst17.0/_._",
+        "runtimes/maccatalyst/native/libHarfBuzzSharp.framework.zip"
+      ]
+    },
+    "HarfBuzzSharp.NativeAssets.Win32/8.3.1.1": {
+      "sha512": "UsJtQsfAJoFDZrXc4hCUfRPMqccfKZ0iumJ/upcUjz/cmsTgVFGNEL5yaJWmkqsuFYdMWbj/En5/kS4PFl9hBA==",
+      "type": "package",
+      "path": "harfbuzzsharp.nativeassets.win32/8.3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "buildTransitive/net462/HarfBuzzSharp.NativeAssets.Win32.targets",
+        "harfbuzzsharp.nativeassets.win32.8.3.1.1.nupkg.sha512",
+        "harfbuzzsharp.nativeassets.win32.nuspec",
+        "icon.png",
+        "lib/net462/_._",
+        "lib/net6.0-windows10.0.19041/_._",
+        "lib/net6.0/_._",
+        "lib/net8.0-windows10.0.19041/_._",
+        "lib/net8.0/_._",
+        "lib/netstandard2.0/_._",
+        "lib/netstandard2.1/_._",
+        "runtimes/win-arm64/native/libHarfBuzzSharp.dll",
+        "runtimes/win-x64/native/libHarfBuzzSharp.dll",
+        "runtimes/win-x86/native/libHarfBuzzSharp.dll"
+      ]
+    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -43961,6 +48654,88 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "LiveChartsCore/2.0.0-rc6.1": {
+      "sha512": "yaeFXCpH7AspjMKzXNdfr1Ikg06Dm+a4XRW/8wBtHAa/TEVJLY8yBsG6pNpjrPk+FpRaSImlNYw7pv298W1XPw==",
+      "type": "package",
+      "path": "livechartscore/2.0.0-rc6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net462/LiveChartsCore.dll",
+        "lib/net462/LiveChartsCore.xml",
+        "lib/net6.0-windows10.0.19041/LiveChartsCore.dll",
+        "lib/net6.0-windows10.0.19041/LiveChartsCore.xml",
+        "lib/net8.0-android34.0/LiveChartsCore.dll",
+        "lib/net8.0-android34.0/LiveChartsCore.xml",
+        "lib/net8.0-ios18.0/LiveChartsCore.dll",
+        "lib/net8.0-ios18.0/LiveChartsCore.xml",
+        "lib/net8.0-maccatalyst18.0/LiveChartsCore.dll",
+        "lib/net8.0-maccatalyst18.0/LiveChartsCore.xml",
+        "lib/net8.0-windows10.0.19041/LiveChartsCore.dll",
+        "lib/net8.0-windows10.0.19041/LiveChartsCore.xml",
+        "lib/net8.0/LiveChartsCore.dll",
+        "lib/net8.0/LiveChartsCore.xml",
+        "lib/netstandard2.0/LiveChartsCore.dll",
+        "lib/netstandard2.0/LiveChartsCore.xml",
+        "lib/netstandard2.1/LiveChartsCore.dll",
+        "lib/netstandard2.1/LiveChartsCore.xml",
+        "livechartscore.2.0.0-rc6.1.nupkg.sha512",
+        "livechartscore.nuspec"
+      ]
+    },
+    "LiveChartsCore.SkiaSharpView/2.0.0-rc6.1": {
+      "sha512": "FU+0uIxL3xR631+4aN296L+M3f6qWrIEUJr8+SSmcGVVa27iB0+ko55IRInZGdYlmaR+8mRTPAXObXT6/1EMDQ==",
+      "type": "package",
+      "path": "livechartscore.skiasharpview/2.0.0-rc6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net462/LiveChartsCore.SkiaSharpView.dll",
+        "lib/net462/LiveChartsCore.SkiaSharpView.xml",
+        "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.dll",
+        "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.xml",
+        "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.dll",
+        "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.xml",
+        "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.dll",
+        "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.xml",
+        "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.dll",
+        "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.xml",
+        "lib/net8.0-windows10.0.20348/LiveChartsCore.SkiaSharpView.dll",
+        "lib/net8.0-windows10.0.20348/LiveChartsCore.SkiaSharpView.xml",
+        "lib/net8.0/LiveChartsCore.SkiaSharpView.dll",
+        "lib/net8.0/LiveChartsCore.SkiaSharpView.xml",
+        "lib/netstandard2.0/LiveChartsCore.SkiaSharpView.dll",
+        "lib/netstandard2.0/LiveChartsCore.SkiaSharpView.xml",
+        "lib/netstandard2.1/LiveChartsCore.SkiaSharpView.dll",
+        "lib/netstandard2.1/LiveChartsCore.SkiaSharpView.xml",
+        "livechartscore.skiasharpview.2.0.0-rc6.1.nupkg.sha512",
+        "livechartscore.skiasharpview.nuspec"
+      ]
+    },
+    "LiveChartsCore.SkiaSharpView.Maui/2.0.0-rc6.1": {
+      "sha512": "h0hljwbDlXoMQHF1NwSnpRKc4jNqC+DItyM4i2uCTWfooMrflYrliAdA397lyLsB2et2Qrr2DpfGwRe/qn9nrA==",
+      "type": "package",
+      "path": "livechartscore.skiasharpview.maui/2.0.0-rc6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.Maui.dll",
+        "lib/net8.0-android34.0/LiveChartsCore.SkiaSharpView.Maui.xml",
+        "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.Maui.dll",
+        "lib/net8.0-ios18.0/LiveChartsCore.SkiaSharpView.Maui.xml",
+        "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.Maui.dll",
+        "lib/net8.0-maccatalyst18.0/LiveChartsCore.SkiaSharpView.Maui.xml",
+        "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.Maui.dll",
+        "lib/net8.0-windows10.0.19041/LiveChartsCore.SkiaSharpView.Maui.xml",
+        "lib/net8.0/LiveChartsCore.SkiaSharpView.Maui.dll",
+        "lib/net8.0/LiveChartsCore.SkiaSharpView.Maui.xml",
+        "livechartscore.skiasharpview.maui.2.0.0-rc6.1.nupkg.sha512",
+        "livechartscore.skiasharpview.maui.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
@@ -47203,6 +51978,309 @@
         "readme.md"
       ]
     },
+    "SkiaSharp/3.119.0": {
+      "sha512": "gR9yVoOta2Mc1Rxt15LD65AckfHMfwjIs/3kkD59C9bT2nYYISsE6uz3t4aMPNHA6CgsIL0Ssn+jE5OVilZ1yw==",
+      "type": "package",
+      "path": "skiasharp/3.119.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "icon.png",
+        "interactive-extensions/dotnet/SkiaSharp.DotNet.Interactive.dll",
+        "lib/net462/SkiaSharp.dll",
+        "lib/net462/SkiaSharp.pdb",
+        "lib/net6.0/SkiaSharp.dll",
+        "lib/net6.0/SkiaSharp.pdb",
+        "lib/net8.0-android34.0/SkiaSharp.dll",
+        "lib/net8.0-android34.0/SkiaSharp.pdb",
+        "lib/net8.0-android34.0/SkiaSharp.xml",
+        "lib/net8.0-ios17.0/SkiaSharp.dll",
+        "lib/net8.0-ios17.0/SkiaSharp.pdb",
+        "lib/net8.0-maccatalyst17.0/SkiaSharp.dll",
+        "lib/net8.0-maccatalyst17.0/SkiaSharp.pdb",
+        "lib/net8.0-macos14.0/SkiaSharp.dll",
+        "lib/net8.0-macos14.0/SkiaSharp.pdb",
+        "lib/net8.0-tizen7.0/SkiaSharp.dll",
+        "lib/net8.0-tizen7.0/SkiaSharp.pdb",
+        "lib/net8.0-tvos17.0/SkiaSharp.dll",
+        "lib/net8.0-tvos17.0/SkiaSharp.pdb",
+        "lib/net8.0-windows10.0.19041/SkiaSharp.dll",
+        "lib/net8.0-windows10.0.19041/SkiaSharp.pdb",
+        "lib/net8.0/SkiaSharp.dll",
+        "lib/net8.0/SkiaSharp.pdb",
+        "lib/netstandard2.0/SkiaSharp.dll",
+        "lib/netstandard2.0/SkiaSharp.pdb",
+        "lib/netstandard2.1/SkiaSharp.dll",
+        "lib/netstandard2.1/SkiaSharp.pdb",
+        "ref/net462/SkiaSharp.dll",
+        "ref/net6.0/SkiaSharp.dll",
+        "ref/net8.0-android34.0/SkiaSharp.dll",
+        "ref/net8.0-ios17.0/SkiaSharp.dll",
+        "ref/net8.0-maccatalyst17.0/SkiaSharp.dll",
+        "ref/net8.0-macos14.0/SkiaSharp.dll",
+        "ref/net8.0-tizen7.0/SkiaSharp.dll",
+        "ref/net8.0-tvos17.0/SkiaSharp.dll",
+        "ref/net8.0-windows10.0.19041/SkiaSharp.dll",
+        "ref/net8.0/SkiaSharp.dll",
+        "ref/netstandard2.0/SkiaSharp.dll",
+        "ref/netstandard2.1/SkiaSharp.dll",
+        "skiasharp.3.119.0.nupkg.sha512",
+        "skiasharp.nuspec"
+      ]
+    },
+    "SkiaSharp.HarfBuzz/3.119.0": {
+      "sha512": "5ocGzl+RYEZFnUPUbModshnEFvKTku4hTtOBsLvy5MCK2KAHjq5Nw2+uAVUx79Rjh0z8fTojT6ZVav8MJgW0ug==",
+      "type": "package",
+      "path": "skiasharp.harfbuzz/3.119.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "icon.png",
+        "lib/net462/SkiaSharp.HarfBuzz.dll",
+        "lib/net462/SkiaSharp.HarfBuzz.pdb",
+        "lib/net6.0/SkiaSharp.HarfBuzz.dll",
+        "lib/net6.0/SkiaSharp.HarfBuzz.pdb",
+        "lib/net8.0/SkiaSharp.HarfBuzz.dll",
+        "lib/net8.0/SkiaSharp.HarfBuzz.pdb",
+        "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll",
+        "lib/netstandard2.0/SkiaSharp.HarfBuzz.pdb",
+        "lib/netstandard2.1/SkiaSharp.HarfBuzz.dll",
+        "lib/netstandard2.1/SkiaSharp.HarfBuzz.pdb",
+        "skiasharp.harfbuzz.3.119.0.nupkg.sha512",
+        "skiasharp.harfbuzz.nuspec"
+      ]
+    },
+    "SkiaSharp.NativeAssets.Android/3.119.0": {
+      "sha512": "c5g3sig19hZcW8yLZIiWEzg06Y8QaEhkt38qu75Vq8OtCu4qLEqhDHUuk/ZyOjwi2r50z6rt0354HCLwZaELGg==",
+      "type": "package",
+      "path": "skiasharp.nativeassets.android/3.119.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "buildTransitive/net8.0-android34.0/SkiaSharp.NativeAssets.Android.targets",
+        "icon.png",
+        "lib/net8.0-android34.0/_._",
+        "runtimes/android-arm/native/libSkiaSharp.so",
+        "runtimes/android-arm64/native/libSkiaSharp.so",
+        "runtimes/android-x64/native/libSkiaSharp.so",
+        "runtimes/android-x86/native/libSkiaSharp.so",
+        "skiasharp.nativeassets.android.3.119.0.nupkg.sha512",
+        "skiasharp.nativeassets.android.nuspec"
+      ]
+    },
+    "SkiaSharp.NativeAssets.iOS/3.119.0": {
+      "sha512": "6Rcg6mHAreLx1bMu+lpndjTk8htSKisEIEx5/IEwy1pfas2iEmqY8gxZ+9mUnzJ3BvmhIlBaqO3Svlrs+eH9mA==",
+      "type": "package",
+      "path": "skiasharp.nativeassets.ios/3.119.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "buildTransitive/net8.0-ios17.0/SkiaSharp.NativeAssets.iOS.targets",
+        "icon.png",
+        "lib/net8.0-ios17.0/_._",
+        "runtimes/ios/native/libSkiaSharp.framework/Info.plist",
+        "runtimes/ios/native/libSkiaSharp.framework/_CodeSignature/CodeResources",
+        "runtimes/ios/native/libSkiaSharp.framework/libSkiaSharp",
+        "runtimes/iossimulator/native/libSkiaSharp.framework/Info.plist",
+        "runtimes/iossimulator/native/libSkiaSharp.framework/_CodeSignature/CodeResources",
+        "runtimes/iossimulator/native/libSkiaSharp.framework/libSkiaSharp",
+        "skiasharp.nativeassets.ios.3.119.0.nupkg.sha512",
+        "skiasharp.nativeassets.ios.nuspec"
+      ]
+    },
+    "SkiaSharp.NativeAssets.MacCatalyst/3.119.0": {
+      "sha512": "nNLYoPpP3wRA15byR4oO+5XXODh6YlHHBjFSpAaCKbp4LA15WdQh75SaRObNhvx00++8qjW40md781DzOOobxA==",
+      "type": "package",
+      "path": "skiasharp.nativeassets.maccatalyst/3.119.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "buildTransitive/net8.0-maccatalyst17.0/SkiaSharp.NativeAssets.MacCatalyst.targets",
+        "icon.png",
+        "lib/net8.0-maccatalyst17.0/_._",
+        "runtimes/maccatalyst/native/libSkiaSharp.framework.zip",
+        "skiasharp.nativeassets.maccatalyst.3.119.0.nupkg.sha512",
+        "skiasharp.nativeassets.maccatalyst.nuspec"
+      ]
+    },
+    "SkiaSharp.NativeAssets.Win32/3.119.0": {
+      "sha512": "IwC9yx36lOdXVT2DjgmWHl1qkVspfj8ctd4+li8CNnvqdfaTolXCOh6TLznURcPAvzatx9K/tLOB7zT6T8EA9w==",
+      "type": "package",
+      "path": "skiasharp.nativeassets.win32/3.119.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net462/SkiaSharp.NativeAssets.Win32.targets",
+        "buildTransitive/net462/SkiaSharp.NativeAssets.Win32.targets",
+        "icon.png",
+        "lib/net462/_._",
+        "lib/net6.0-windows10.0.19041/_._",
+        "lib/net6.0/_._",
+        "lib/net8.0-windows10.0.19041/_._",
+        "lib/net8.0/_._",
+        "lib/netstandard2.0/_._",
+        "lib/netstandard2.1/_._",
+        "runtimes/win-arm64/native/libSkiaSharp.dll",
+        "runtimes/win-x64/native/libSkiaSharp.dll",
+        "runtimes/win-x86/native/libSkiaSharp.dll",
+        "skiasharp.nativeassets.win32.3.119.0.nupkg.sha512",
+        "skiasharp.nativeassets.win32.nuspec"
+      ]
+    },
+    "SkiaSharp.NativeAssets.WinUI/3.119.0": {
+      "sha512": "3SKd21ukSNowYTw36gnYdUL7VZMZD3/LQCcM1DygvpTqt+YaetsufJjuSqj0mdfz6V2EZvyIkDYR0K93Gb3Dog==",
+      "type": "package",
+      "path": "skiasharp.nativeassets.winui/3.119.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "icon.png",
+        "lib/net6.0-windows10.0.19041/_._",
+        "lib/net8.0-windows10.0.19041/_._",
+        "runtimes/win-arm64/lib/net8.0-windows10.0.19041.0/SkiaSharp.Views.WinUI.Native.Projection.dll",
+        "runtimes/win-arm64/native/SkiaSharp.Views.WinUI.Native.dll",
+        "runtimes/win-arm64/native/SkiaSharp.Views.WinUI.Native.winmd",
+        "runtimes/win-arm64/native/libEGL.dll",
+        "runtimes/win-arm64/native/libGLESv2.dll",
+        "runtimes/win-x64/lib/net8.0-windows10.0.19041.0/SkiaSharp.Views.WinUI.Native.Projection.dll",
+        "runtimes/win-x64/native/SkiaSharp.Views.WinUI.Native.dll",
+        "runtimes/win-x64/native/SkiaSharp.Views.WinUI.Native.winmd",
+        "runtimes/win-x64/native/libEGL.dll",
+        "runtimes/win-x64/native/libGLESv2.dll",
+        "runtimes/win-x86/lib/net8.0-windows10.0.19041.0/SkiaSharp.Views.WinUI.Native.Projection.dll",
+        "runtimes/win-x86/native/SkiaSharp.Views.WinUI.Native.dll",
+        "runtimes/win-x86/native/SkiaSharp.Views.WinUI.Native.winmd",
+        "runtimes/win-x86/native/libEGL.dll",
+        "runtimes/win-x86/native/libGLESv2.dll",
+        "skiasharp.nativeassets.winui.3.119.0.nupkg.sha512",
+        "skiasharp.nativeassets.winui.nuspec"
+      ]
+    },
+    "SkiaSharp.Views/3.119.0": {
+      "sha512": "wikdEQ1rBISAJo9OHr6yylhdYKKV9up/GpLGri1KYLqkXYWmZS+5boTDaDEk2OLxC7o5Da0XQuxixNZCZXD/Lw==",
+      "type": "package",
+      "path": "skiasharp.views/3.119.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "buildTransitive/net462/SkiaSharp.Views.targets",
+        "buildTransitive/net6.0-windows10.0.19041/SkiaSharp.Views.targets",
+        "buildTransitive/net8.0-windows10.0.19041/SkiaSharp.Views.targets",
+        "icon.png",
+        "lib/net462/_._",
+        "lib/net6.0-windows10.0.19041.0/_._",
+        "lib/net8.0-android34.0/SkiaSharp.Views.Android.aar",
+        "lib/net8.0-android34.0/SkiaSharp.Views.Android.dll",
+        "lib/net8.0-android34.0/SkiaSharp.Views.Android.pdb",
+        "lib/net8.0-android34.0/SkiaSharp.Views.Android.xml",
+        "lib/net8.0-ios17.0/SkiaSharp.Views.iOS.dll",
+        "lib/net8.0-ios17.0/SkiaSharp.Views.iOS.pdb",
+        "lib/net8.0-maccatalyst17.0/SkiaSharp.Views.iOS.dll",
+        "lib/net8.0-maccatalyst17.0/SkiaSharp.Views.iOS.pdb",
+        "lib/net8.0-macos14.0/SkiaSharp.Views.Mac.dll",
+        "lib/net8.0-macos14.0/SkiaSharp.Views.Mac.pdb",
+        "lib/net8.0-tizen7.0/SkiaSharp.Views.Tizen.dll",
+        "lib/net8.0-tizen7.0/SkiaSharp.Views.Tizen.pdb",
+        "lib/net8.0-tvos17.0/SkiaSharp.Views.tvOS.dll",
+        "lib/net8.0-tvos17.0/SkiaSharp.Views.tvOS.pdb",
+        "lib/net8.0-windows10.0.19041.0/_._",
+        "skiasharp.views.3.119.0.nupkg.sha512",
+        "skiasharp.views.nuspec"
+      ]
+    },
+    "SkiaSharp.Views.Maui.Controls/3.119.0": {
+      "sha512": "eMise8odYhNEjwif79LYBav7fbCpVp3Gr+qHaPPH92DKlZkKbZ5e18ded+/nAPIPj2cNuFv/WQXnG6sc7Zya8Q==",
+      "type": "package",
+      "path": "skiasharp.views.maui.controls/3.119.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "icon.png",
+        "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Controls.dll",
+        "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Controls.pdb",
+        "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Controls.xml",
+        "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Controls.dll",
+        "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Controls.pdb",
+        "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Controls.dll",
+        "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Controls.pdb",
+        "lib/net8.0-tizen8.0/SkiaSharp.Views.Maui.Controls.dll",
+        "lib/net8.0-tizen8.0/SkiaSharp.Views.Maui.Controls.pdb",
+        "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Controls.dll",
+        "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Controls.pdb",
+        "lib/net8.0/SkiaSharp.Views.Maui.Controls.dll",
+        "lib/net8.0/SkiaSharp.Views.Maui.Controls.pdb",
+        "skiasharp.views.maui.controls.3.119.0.nupkg.sha512",
+        "skiasharp.views.maui.controls.nuspec"
+      ]
+    },
+    "SkiaSharp.Views.Maui.Core/3.119.0": {
+      "sha512": "O7lZn8BcB+kLHL/pgRiIqrcgPD6nCwEf7vT2YsnvLyR5Iha+Sc1BK+/ZJM1JDmadh+P4w8/cSPBlcoGcU57JAg==",
+      "type": "package",
+      "path": "skiasharp.views.maui.core/3.119.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "icon.png",
+        "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Core.dll",
+        "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Core.pdb",
+        "lib/net8.0-android34.0/SkiaSharp.Views.Maui.Core.xml",
+        "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Core.dll",
+        "lib/net8.0-ios17.5/SkiaSharp.Views.Maui.Core.pdb",
+        "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Core.dll",
+        "lib/net8.0-maccatalyst17.5/SkiaSharp.Views.Maui.Core.pdb",
+        "lib/net8.0-tizen8.0/SkiaSharp.Views.Maui.Core.dll",
+        "lib/net8.0-tizen8.0/SkiaSharp.Views.Maui.Core.pdb",
+        "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Core.dll",
+        "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Maui.Core.pdb",
+        "lib/net8.0/SkiaSharp.Views.Maui.Core.dll",
+        "lib/net8.0/SkiaSharp.Views.Maui.Core.pdb",
+        "skiasharp.views.maui.core.3.119.0.nupkg.sha512",
+        "skiasharp.views.maui.core.nuspec"
+      ]
+    },
+    "SkiaSharp.Views.WinUI/3.119.0": {
+      "sha512": "ApBQ+okTw05BTSdw1wALI2IwJgQ0eXa2nvzoLMTHtbTtrQiGJzMR0K//Qh4PkYrVI5LPSd8NdG9R1B0L6gRiSg==",
+      "type": "package",
+      "path": "skiasharp.views.winui/3.119.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "icon.png",
+        "lib/net6.0-windows10.0.19041/SkiaSharp.Views.Windows.dll",
+        "lib/net6.0-windows10.0.19041/SkiaSharp.Views.Windows.pdb",
+        "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Windows.dll",
+        "lib/net8.0-windows10.0.19041/SkiaSharp.Views.Windows.pdb",
+        "skiasharp.views.winui.3.119.0.nupkg.sha512",
+        "skiasharp.views.winui.nuspec"
+      ]
+    },
     "SourceGear.sqlite3/3.50.4.2": {
       "sha512": "eV9HwQ88WyoU+reGVxJz1SwME9NbYnl9h2LOY15j0LGdXN4JkTJDk8JRRg/yNgt00O3Cn5/qnska10FEZNoU5g==",
       "type": "package",
@@ -49599,6 +54677,7 @@
   "projectFileDependencyGroups": {
     "net9.0-android35.0": [
       "FinanceApp.Shared >= 1.0.0",
+      "LiveChartsCore.SkiaSharpView.Maui >= 2.0.0-rc6.1",
       "Microsoft.EntityFrameworkCore >= 9.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.9",
       "Microsoft.EntityFrameworkCore.Sqlite >= 9.0.9",
@@ -49608,6 +54687,7 @@
     ],
     "net9.0-ios18.5": [
       "FinanceApp.Shared >= 1.0.0",
+      "LiveChartsCore.SkiaSharpView.Maui >= 2.0.0-rc6.1",
       "Microsoft.EntityFrameworkCore >= 9.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.9",
       "Microsoft.EntityFrameworkCore.Sqlite >= 9.0.9",
@@ -49617,6 +54697,7 @@
     ],
     "net9.0-maccatalyst18.5": [
       "FinanceApp.Shared >= 1.0.0",
+      "LiveChartsCore.SkiaSharpView.Maui >= 2.0.0-rc6.1",
       "Microsoft.EntityFrameworkCore >= 9.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.9",
       "Microsoft.EntityFrameworkCore.Sqlite >= 9.0.9",
@@ -49626,6 +54707,7 @@
     ],
     "net9.0-windows10.0.19041": [
       "FinanceApp.Shared >= 1.0.0",
+      "LiveChartsCore.SkiaSharpView.Maui >= 2.0.0-rc6.1",
       "Microsoft.EntityFrameworkCore >= 9.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.9",
       "Microsoft.EntityFrameworkCore.Sqlite >= 9.0.9",
@@ -49716,6 +54798,10 @@
       "net9.0-android35.0": {
         "targetAlias": "net9.0-android",
         "dependencies": {
+          "LiveChartsCore.SkiaSharpView.Maui": {
+            "target": "Package",
+            "version": "[2.0.0-rc6.1, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[9.0.9, )"
@@ -49769,6 +54855,10 @@
       "net9.0-ios18.5": {
         "targetAlias": "net9.0-ios",
         "dependencies": {
+          "LiveChartsCore.SkiaSharpView.Maui": {
+            "target": "Package",
+            "version": "[2.0.0-rc6.1, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[9.0.9, )"
@@ -49822,6 +54912,10 @@
       "net9.0-maccatalyst18.5": {
         "targetAlias": "net9.0-maccatalyst",
         "dependencies": {
+          "LiveChartsCore.SkiaSharpView.Maui": {
+            "target": "Package",
+            "version": "[2.0.0-rc6.1, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[9.0.9, )"
@@ -49876,6 +54970,10 @@
       "net9.0-windows10.0.19041": {
         "targetAlias": "net9.0-windows10.0.19041.0",
         "dependencies": {
+          "LiveChartsCore.SkiaSharpView.Maui": {
+            "target": "Package",
+            "version": "[2.0.0-rc6.1, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[9.0.9, )"

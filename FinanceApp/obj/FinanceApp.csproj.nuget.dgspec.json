@@ -83,6 +83,10 @@
         "net9.0-android35.0": {
           "targetAlias": "net9.0-android",
           "dependencies": {
+            "LiveChartsCore.SkiaSharpView.Maui": {
+              "target": "Package",
+              "version": "[2.0.0-rc6.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.9, )"
@@ -136,6 +140,10 @@
         "net9.0-ios18.5": {
           "targetAlias": "net9.0-ios",
           "dependencies": {
+            "LiveChartsCore.SkiaSharpView.Maui": {
+              "target": "Package",
+              "version": "[2.0.0-rc6.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.9, )"
@@ -189,6 +197,10 @@
         "net9.0-maccatalyst18.5": {
           "targetAlias": "net9.0-maccatalyst",
           "dependencies": {
+            "LiveChartsCore.SkiaSharpView.Maui": {
+              "target": "Package",
+              "version": "[2.0.0-rc6.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.9, )"
@@ -243,6 +255,10 @@
         "net9.0-windows10.0.19041": {
           "targetAlias": "net9.0-windows10.0.19041.0",
           "dependencies": {
+            "LiveChartsCore.SkiaSharpView.Maui": {
+              "target": "Package",
+              "version": "[2.0.0-rc6.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.9, )"
