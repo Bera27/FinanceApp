@@ -87,23 +87,24 @@
                         <Border StrokeShape="RoundRectangle 40"
                             Padding="10">
 
-                            <Grid ColumnDefinitions="*,*,*,auto"
+                            <Grid ColumnDefinitions="auto,*,auto"
                               RowDefinitions="Auto">
 
-                                <Label Text="{Binding Descricao}"
-                                   Grid.Column="0"/>
+                                <Image Source="{Binding Categoria.ImagemPath}"
+                                       WidthRequest="38"
+                                       Grid.Column="0" />
 
-                                <Label Text="{Binding DataVencimento, StringFormat='{}{0:dd/MM/yyyy}'}"
-                                   FontSize="12"
-                                   Grid.Column="1" />
-
-                                <Label Text="{Binding DataPagamento, StringFormat='{}{0:dd/MM/yyyy}'}"
-                                   FontSize="12"
-                                   Grid.Column="2" />
+                                <Label Text="{Binding Descricao}" 
+                                       VerticalTextAlignment="Center" 
+                                       Padding="5"
+                                       FontSize="15"
+                                       Grid.Column="1"/>
 
                                 <Label Text="{Binding Valor, StringFormat='{}{0:C}'}"
-                                   TextColor="ForestGreen"
-                                   Grid.Column="3" />
+                                       TextColor="ForestGreen"
+                                       VerticalTextAlignment="Center"
+                                       FontSize="15"
+                                       Grid.Column="2" />
                             </Grid>
                         </Border>
                     </SwipeView>

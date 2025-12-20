@@ -29,10 +29,12 @@ public partial class DespesaView : ContentPage
     {
         try
         {
-            var despesaList = await _context.Despesas.ToListAsync();
+            var despesaList = await _context.Despesas
+                                            .Include(x => x.Categoria)
+                                            .AsNoTracking()
+                                            .ToListAsync();            
 
             CollectionViewDespesas.ItemsSource = despesaList;
-
             CalculoDeTotal(despesaList);
         }
         catch (Exception ex)
@@ -41,6 +43,7 @@ public partial class DespesaView : ContentPage
         }
     }
 
+    // Função para excluir a despesa usando o Swipe
     private async void SwipeItem_Invoked(object sender, EventArgs e)
     {
         if (sender is SwipeItem swipeItem && swipeItem.CommandParameter is Despesa item)
@@ -57,6 +60,7 @@ public partial class DespesaView : ContentPage
         }
     }
 
+    // Soma o valor de todas as despesas
     public void CalculoDeTotal(IEnumerable<Despesa> despesas)
     {
         decimal total = despesas.Sum(x => x.Valor);
