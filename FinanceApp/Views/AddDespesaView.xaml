@@ -5,33 +5,6 @@
              Shell.NavBarIsVisible="False">
 
     <StackLayout>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
-
-            <Label Text="DESPESAS"
-                   FontSize="20"
-                   TextDecorations="Underline"
-                   Grid.Row="0"
-                   Grid.Column="0"
-                   Margin="20,0,0,0" />
-
-            <Label Text="RENDA"
-                   FontSize="20"
-                   Grid.Row="0"
-                   Grid.Column="1"
-                   Margin="0,0,20,0" />
-
-        </Grid>
-
         <Border HeightRequest="550"
                 WidthRequest="300"
                 StrokeShape="RoundRectangle 15" Padding="10">

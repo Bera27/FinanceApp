@@ -14,6 +14,8 @@ namespace FinanceApp
         {
             Routing.RegisterRoute("Despesa", typeof(DespesaView));
             Routing.RegisterRoute("AddDespesa", typeof(AddDespesaView));
+            Routing.RegisterRoute("RendaView", typeof(RendaView));
+            Routing.RegisterRoute("AddRendaView", typeof(AddRendaView));
         }
     }
 }

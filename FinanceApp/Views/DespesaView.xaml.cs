@@ -23,6 +23,9 @@ public partial class DespesaView : ContentPage
     private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
         => Shell.Current.GoToAsync("AddDespesa");
 
+    private void TapGestureRecognizer_Renda(object sender, TappedEventArgs e)
+        => Shell.Current.GoToAsync("RendaView");
+
     protected override async void OnAppearing()
     {
         base.OnAppearing();
@@ -66,7 +69,7 @@ public partial class DespesaView : ContentPage
     }
 
     // Soma o valor de todas as despesas
-    public void CalculoDeTotal(IEnumerable<Despesa> despesas)
+    private void CalculoDeTotal(IEnumerable<Despesa> despesas)
     {
         decimal total = despesas.Sum(x => x.Valor);
 

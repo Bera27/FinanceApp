@@ -56,8 +56,20 @@ build_metadata.AdditionalFiles.ManifestResourceName = FinanceApp.Views.AddDespes
 build_metadata.AdditionalFiles.TargetPath = Views\AddDespesaView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\AddDespesaView.xaml
 
+[C:/Projetos/FinanceApp/FinanceApp/Views/AddRendaView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceApp.Views.AddRendaView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AddRendaView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AddRendaView.xaml
+
 [C:/Projetos/FinanceApp/FinanceApp/Views/DespesaView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FinanceApp.Views.DespesaView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\DespesaView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\DespesaView.xaml
+
+[C:/Projetos/FinanceApp/FinanceApp/Views/RendaView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FinanceApp.Views.RendaView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\RendaView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\RendaView.xaml

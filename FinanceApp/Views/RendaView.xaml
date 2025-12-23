@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
-             x:Class="FinanceApp.Views.DespesaView"
+             x:Class="FinanceApp.Views.RendaView"
+             Title="RendaView"
              Shell.NavBarIsVisible="False">
 
     <ScrollView>
@@ -30,25 +31,23 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
-                <Label
-                Text="DESPESA"
-                TextDecorations="Underline"
-                FontSize="15"
-                Grid.Row="0"
-                Grid.Column="0"
-                Margin="20,0,0,0" />
+                <Label Text="DESPESA"
+                       FontSize="15"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       Margin="20,0,0,0">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Despesa"
+                                              NumberOfTapsRequired="1" />
+                    </Label.GestureRecognizers>
+                </Label>
 
                 <Label Text="RENDA"
                        FontSize="15"
+                       TextDecorations="Underline"
                        Grid.Row="0"
                        Grid.Column="1" 
-                       Margin="0,0,20,0">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Renda" 
-                                              NumberOfTapsRequired="1"/> 
-                    </Label.GestureRecognizers>
-                    
-                </Label>
+                       Margin="0,0,20,0"/>
             </Grid>
 
             <!-- Section -->
@@ -58,7 +57,7 @@
                 StrokeShape="RoundRectangle 15">
 
                 <Grid>
-                    <lvc:PieChart x:Name="GraficoDespesas"
+                    <lvc:PieChart x:Name="GraficoRenda"
                               HeightRequest="200"
                               />
 
@@ -70,14 +69,14 @@
                          >
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
-                                          NumberOfTapsRequired="1"/>
+                                                  NumberOfTapsRequired="1"/>
                         </Image.GestureRecognizers>
                     </Image>
                 </Grid>
             </Border>
 
             <!-- Lista das despesas -->
-            <CollectionView x:Name="CollectionViewDespesas"
+            <CollectionView x:Name="CollectionViewRenda"
                         Margin="5">
 
                 <CollectionView.ItemsLayout>
