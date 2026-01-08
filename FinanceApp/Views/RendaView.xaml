@@ -2,127 +2,133 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
+             xmlns:draw="clr-namespace:FinanceApp.Drawables;assembly=FinanceApp"
              x:Class="FinanceApp.Views.RendaView"
              Title="RendaView"
              Shell.NavBarIsVisible="False">
 
-    <ScrollView>
-        <StackLayout>
+    <Grid RowDefinitions="180,Auto,*" ColumnDefinitions="*">
+        <Grid Grid.Row="0">
 
-            <!-- Header -->
-            <Label 
-            Text="Total"
-            FontSize="20"
-            HorizontalOptions="Center" />
+            <GraphicsView HeightRequest="180" 
+                          HorizontalOptions="Fill" 
+                          VerticalOptions="Fill">
+                <GraphicsView.Drawable>
+                    <draw:Drawable HeaderColor="#2E8B8B" 
+                                   PageBackgroundColor="White" />
+                </GraphicsView.Drawable>
+            </GraphicsView>
 
-            <Label
-            x:Name="txtTotal"
-            Text="R$0,00" 
-            FontSize="20"
-            HorizontalOptions="Center"/>
-
-            <Grid>
+            <Grid Padding="5">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
+                <Label Text="Total" 
+                       FontSize="20" 
+                       TextColor="White" 
+                       HorizontalOptions="Center" 
+                       Grid.Row="0" />
+                <Label x:Name="txtTotal" 
+                       Text="R$0,00" 
+                       FontSize="20" 
+                       TextColor="White" 
+                       HorizontalOptions="Center" 
+                       Grid.Row="1" />
 
-                <Label Text="DESPESA"
-                       FontSize="15"
+                <Image HeightRequest="25"
+                       Source="bolsadinheiro.png"
                        Grid.Row="0"
-                       Grid.Column="0"
-                       Margin="20,0,0,0">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Despesa"
-                                              NumberOfTapsRequired="1" />
-                    </Label.GestureRecognizers>
-                </Label>
+                       Margin="0,0,90,0"/>
 
-                <Label Text="RENDA"
-                       FontSize="15"
-                       TextDecorations="Underline"
-                       Grid.Row="0"
-                       Grid.Column="1" 
-                       Margin="0,0,20,0"/>
-            </Grid>
+                <Grid Grid.Row="2" 
+                      Margin="0,8,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
 
-            <!-- Section -->
-            <Border StrokeThickness="2" 
-                HeightRequest="200" 
-                WidthRequest="300" 
-                StrokeShape="RoundRectangle 15">
-
-                <Grid>
-                    <lvc:PieChart x:Name="GraficoRenda"
-                              HeightRequest="200"
-                              />
-
-                    <Image Source="adicionar.png" 
-                         HeightRequest="40"
-                         VerticalOptions="End"
-                         HorizontalOptions="End"
-                         Margin="10"
-                         >
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                    <Label Text="DESPESA"  
+                           FontSize="20" 
+                           TextColor="White" 
+                           Grid.Column="0" 
+                           Margin="12,0,0,0"
+                           Opacity="0.8">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Despesa" 
                                                   NumberOfTapsRequired="1"/>
-                        </Image.GestureRecognizers>
-                    </Image>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Label Text="RENDA" 
+                           FontSize="20" 
+                           TextColor="White" 
+                           Grid.Column="1" 
+                           Margin="0,0,12,0"
+                           TextDecorations="Underline"/>
                 </Grid>
-            </Border>
+            </Grid>
+        </Grid>
 
-            <!-- Lista das despesas -->
-            <CollectionView x:Name="CollectionViewRenda"
-                        Margin="5">
+        <Border Grid.Row="1"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 15"
+                HorizontalOptions="Center"
+                Margin="0,-80,0,8"
+                Padding="0"
+                BackgroundColor="White">
 
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="5" />
-                </CollectionView.ItemsLayout>
+            <Grid WidthRequest="320" HeightRequest="200">
 
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <SwipeView>
-                            <SwipeView.RightItems>
-                                <SwipeItems Mode="Reveal">
-                                    <SwipeItem Text="Excluir"
-                                           IconImageSource="trash.png"
-                                           BackgroundColor="Red"
-                                           Invoked="SwipeItem_Invoked"
+                <lvc:PieChart x:Name="GraficoRenda" 
+                              HeightRequest="200" />
+                <Image Source="adicionar.png" 
+                       HeightRequest="40" 
+                       VerticalOptions="End" 
+                       HorizontalOptions="End" 
+                       Margin="10">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" 
+                                              NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+        </Border>
+
+        <CollectionView Grid.Row="2" 
+                        x:Name="CollectionViewRenda" 
+                        Margin="5" >
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical"
+                                   ItemSpacing="5" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems Mode="Reveal">
+                                <SwipeItem Text="Excluir" 
+                                           IconImageSource="trash.png" 
+                                           BackgroundColor="Red" 
+                                           Invoked="SwipeItem_Invoked" 
                                            CommandParameter="{Binding .}" />
-                                </SwipeItems>
-                            </SwipeView.RightItems>
+                            </SwipeItems>
+                        </SwipeView.RightItems>
 
-                            <Border StrokeShape="RoundRectangle 40"
-                            Padding="10">
-
-                                <Grid ColumnDefinitions="auto,*,auto"
-                              RowDefinitions="Auto">
-
-                                    <Image Source="{Binding Categoria.ImagemPath}"
-                                       WidthRequest="38"
-                                       Grid.Column="0" />
-
-                                    <Label Text="{Binding Descricao}" 
-                                       VerticalTextAlignment="Center" 
-                                       Padding="5"
-                                       FontSize="15"
-                                       Grid.Column="1"/>
-
-                                    <Label Text="{Binding Valor, StringFormat='{}{0:C}'}"
-                                       TextColor="ForestGreen"
-                                       VerticalTextAlignment="Center"
-                                       FontSize="15"
-                                       Grid.Column="2" />
-                                </Grid>
-                            </Border>
-                        </SwipeView>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
-    </ScrollView>
+                        <Border StrokeShape="RoundRectangle 40" 
+                                Padding="10" 
+                                Margin="0,6">
+                            <Grid ColumnDefinitions="auto,*,auto" RowDefinitions="Auto">
+                                <Image Source="{Binding Categoria.ImagemPath}" WidthRequest="38" Grid.Column="0" />
+                                <Label Text="{Binding Decricao}" VerticalTextAlignment="Center" Padding="5" FontSize="15" Grid.Column="1" />
+                                <Label Text="{Binding Valor, StringFormat='{}{0:C}'}" TextColor="ForestGreen" VerticalTextAlignment="Center" FontSize="15" Grid.Column="2" />
+                            </Grid>
+                        </Border>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
 </ContentPage>
